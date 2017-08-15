@@ -1,6 +1,9 @@
 pipeline {
   agent {
-    docker 'maven:3.3.3'
+    node {
+      label 'Window 7 x64'
+    }
+    
   }
   stages {
     stage('build') {
