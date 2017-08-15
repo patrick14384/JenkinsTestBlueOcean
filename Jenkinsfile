@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'Windows7 x64'
+      label 'TFS Build'
     }
     
   }
@@ -11,5 +11,8 @@ pipeline {
         powershell(script: 'CheckForLatestIncrementalBuild.ps1', returnStatus: true)
       }
     }
+  }
+  environment {
+    First = 'TFS Build'
   }
 }
