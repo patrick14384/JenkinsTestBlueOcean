@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        powershell 'CheckForLatestIncrementalBuild.ps1'
+        powershell(script: 'CheckForLatestIncrementalBuild.ps1', returnStatus: true)
       }
     }
   }
